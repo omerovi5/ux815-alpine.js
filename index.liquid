@@ -4,10 +4,10 @@ title: Home
 ---
 
 <div class="container my-5" x-data="{ randomName: '' }">
-  <h1 class="display-4 mb-4" x-text="randomName"></h1>
   <button class="btn btn-primary" @click="randomName = getRandomName()">
     Get Random Name
   </button>
+   <h1 class="display-4 mb-4" x-text="randomName"></h1>
 </div>
 
 <script>
