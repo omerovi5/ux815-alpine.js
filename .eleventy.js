@@ -1,6 +1,9 @@
-
-// The export statement makes these settings available to other files in 11ty
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("images");
-  eleventyConfig.addPassthroughCopy("styles");
+module.exports = function (eleventyConfig) {
+  // No need to do anything with CSS since we're using Bootstrap
+  return {
+    dir: {
+      input: ".",
+      output: "_site",
+    },
+  };
 };

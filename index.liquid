@@ -1,7 +1,18 @@
 ---
 layout: layout.liquid
-title: 11ty Boilerplate
+title: Home
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<div class="container my-5" x-data="{ randomName: '' }">
+  <h1 class="display-4 mb-4" x-text="randomName"></h1>
+  <button class="btn btn-primary" @click="randomName = getRandomName()">
+    Get Random Name
+  </button>
+</div>
+
+<script>
+  function getRandomName() {
+    const names = ['John', 'Jane', 'Bob', 'Alice', 'Tom', 'Emily', 'David', 'Sarah', 'Michael', 'Jessica'];
+    return names[Math.floor(Math.random() * names.length)];
+  }
+</script>
